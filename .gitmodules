@@ -49,4 +49,4 @@
 	url = https://git.linaro.org/openembedded/meta-linaro.git
 [submodule "meta-sdl"]
 	path = meta-sdl
-	url = git://github.com/phongt/meta-sdl.git
+	url = git://github.com/gunnarx/meta-sdl.git
