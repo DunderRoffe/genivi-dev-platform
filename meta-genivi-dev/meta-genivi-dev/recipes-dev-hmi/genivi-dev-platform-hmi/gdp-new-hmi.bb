@@ -1,5 +1,5 @@
-SRC_URI = "git://github.com/dunderroffe/hmi-layout-gdp.git;branch=shutdownBtn"
-SRCREV = "7f637ac374bae2429e24bb1887476ba233ea639b"
+SRC_URI = "git://github.com/GENIVI/hmi-layout-gdp.git"
+SRCREV = "95aadfb33d95e14030585c3fa2e1afb0e7b743c8"
 LICENSE  = "MPL-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=9741c346eef56131163e13b9db1241b3"
 
