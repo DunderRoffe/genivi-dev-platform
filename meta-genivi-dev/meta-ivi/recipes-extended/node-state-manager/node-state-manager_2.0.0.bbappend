@@ -1,5 +1,15 @@
-EXTRA_OECONF_append=" --with-nsmc=NodeStateMachineTest "
+NSMC="SimpleNodeStateMachine"
+EXTRA_OECONF_append=" --with-nsmc=${NSMC} "
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-do_install_append() {
-    install -m 755 ${B}/NodeStateMachineTest/NodeStateTest ${D}${bindir}/NodeStateTest
+SRC_URI_append = "file://0001-Build-SimpleNodeStateMachine.patch "
+
+DEPENDS_append = " glibmm ivi-logging"
+
+do_configure_prepend() {
+    git clone https://github.com/GENIVI/simple-node-state-machine.git ${WORKDIR}/git/${NSMC}
+    cd ${NSMC}
+    git checkout 37c2255f79e8061329537bae764f010a042597df
+    touch README NEWS AUTHORS ChangeLog
+    cd -
 }
