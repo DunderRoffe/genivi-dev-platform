@@ -1,11 +1,11 @@
-SRC_URI = "git://github.com/dunderroffe/hmi-layout-gdp.git;branch=shutdownBtn"
-SRCREV = "7f637ac374bae2429e24bb1887476ba233ea639b"
+SRC_URI = "git://github.com/GENIVI/hmi-layout-gdp.git"
+SRCREV = "a80c27df562cc8922cf8db4dbd3c88b55f57e100"
 LICENSE  = "MPL-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=9741c346eef56131163e13b9db1241b3"
 
 DEPENDS = "dbus-c++ systemd wayland-ivi-extension qtquick1 qtbase ivi-logging"
 
-RDEPENDS_${PN} += "qtbase qtsvg simplenodestatemachine"
+RDEPENDS_${PN} += "qtbase qtsvg"
 
 S = "${WORKDIR}/git"
 

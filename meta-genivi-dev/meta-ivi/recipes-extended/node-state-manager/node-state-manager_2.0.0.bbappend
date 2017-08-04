@@ -9,7 +9,7 @@ DEPENDS_append = " glibmm ivi-logging"
 do_configure_prepend() {
     git clone https://github.com/GENIVI/simple-node-state-machine.git ${WORKDIR}/git/${NSMC}
     cd ${NSMC}
-    git checkout e830b57223fc01532a303e05bccedbdcfde6df55
+    git checkout 37c2255f79e8061329537bae764f010a042597df
     touch README NEWS AUTHORS ChangeLog
     cd -
 }
