@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=9741c346eef56131163e13b9db1241b3"
 
 DEPENDS = "dbus-c++ systemd wayland-ivi-extension qtquick1 qtbase ivi-logging"
 
-RDEPENDS_${PN} += "qtbase qtsvg simplenodestatemachine"
+RDEPENDS_${PN} += "qtbase qtsvg"
 
 S = "${WORKDIR}/git"
 
