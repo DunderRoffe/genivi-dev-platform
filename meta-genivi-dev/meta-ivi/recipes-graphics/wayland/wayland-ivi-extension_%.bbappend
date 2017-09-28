@@ -4,18 +4,19 @@
 FILESEXTRAPATHS_append := ":${THISDIR}/${PN}"
 
 SRC_URI_append = "\
-    file://EGLWLInputEventExample.service \
-    file://EGLWLMockNavigation.service \
+    file://EGLWLInputEventExample.desktop \
+    file://EGLWLMockNavigation.desktop \
     "
 
 FILES_${PN} += "\
-    ${libdir}/systemd/user/* \
+    ${libdir}/applications/* \
     "
 
 do_install_append() {
 	install -d ${D}${libdir}/systemd/user
-	install -m 0444 ${WORKDIR}/EGLWLInputEventExample.service \
-	                ${D}${libdir}/systemd/user
-	install -m 0444 ${WORKDIR}/EGLWLMockNavigation.service \
-	                ${D}${libdir}/systemd/user
+	install -m 0444 ${WORKDIR}/EGLWLInputEventExample.desktop \
+	                ${D}/usr/share/applications/EGLWLInputEventExample.desktop
+
+	install -m 0444 ${WORKDIR}/EGLWLMockNavigation.desktop \
+	                ${D}/usr/share/applications/EGLWLMockNavigation.desktop
 }
